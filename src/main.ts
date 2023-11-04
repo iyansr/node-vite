@@ -13,7 +13,7 @@ app.get("/aaa", (_req, res) => {
 });
 
 if (import.meta.env.PROD) {
-  const PORT = import.meta.env.PORT;
+  const PORT = import.meta.env.PORT || 3000;
   app.listen(PORT);
   console.log(`listening on http://localhost:${PORT}/`);
 }
