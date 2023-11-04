@@ -12,9 +12,10 @@ app.get("/aaa", (_req, res) => {
   res.send(`caaaaa ${numberOne}`);
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+if (import.meta.env.PROD) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT);
   console.log(`listening on http://localhost:${PORT}/`);
-});
+}
 
 export const viteNode = app;
