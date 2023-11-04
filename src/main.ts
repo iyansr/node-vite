@@ -13,9 +13,8 @@ app.get("/aaa", (_req, res) => {
 });
 
 if (import.meta.env.PROD) {
-  const PORT = import.meta.env.PORT || 3000;
-  app.listen(PORT);
-  console.log(`listening on http://localhost:${PORT}/`);
+  app.listen(3000);
+  console.log(`listening on http://localhost:${3000}/`);
 }
 
 export const viteNode = app;
